@@ -4,6 +4,7 @@
 import Draggable from "react-draggable";
 import { useRef } from "react";
 import { About, Projects, Experience } from "../functions/appwindowfunctions" 
+import { AppIcon } from "./appicon";
 
 const APPS = {
     About: About,
@@ -22,7 +23,10 @@ export function AppWindow({appName, onClose}: {appName: AppName; onClose: () => 
         <Draggable nodeRef={nodeRef} bounds="parent" handle=".window-titlebar">
             <div ref={nodeRef} className="app-window">
                 <div className="window-titlebar">
-                    <span>{appName}</span>
+                    <div className="window-title">
+                        <AppIcon appName={appName} size={18} />
+                        <span>{appName}</span>
+                    </div>
                     <button
                         type="button"
                         onMouseDown={(event) => event.stopPropagation()}

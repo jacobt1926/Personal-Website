@@ -1,19 +1,20 @@
-export function Footer() {
+import { TaskbarButton } from "./taskbarbutton";
+import type { AppName } from "./appwindow";
 
-    const apps: string[] = ['Menu', 'Projects', 'Experience', 'About'];
+const apps: AppName[] = ["Projects", "Experience", "About"];
 
+export function Footer({ onOpen }: { onOpen: (appName: AppName) => void }) {
     return (
         <footer className="footer">
-            <ul className="taskbar">
-                {apps.map((app, index) => (
-                    <li key={index} className="taskbar-app-buttons">
-                        <button type="button">
-                            {app}
-                        </button>
-                    </li>
+            <ul className="taskbar" style={{ position: "relative" }}>
+                {apps.map((appName) => (
+                    <TaskbarButton
+                        key={appName}
+                        appName={appName}
+                        onOpen={onOpen}
+                    />
                 ))}
             </ul>
-            
         </footer>
-    )
+    );
 }

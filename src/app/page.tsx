@@ -11,6 +11,12 @@ import type { AppName } from "./components/appwindow";
 export default function Home() {
   const [openApps, setOpenApps] = useState<AppName[]>([]);
 
+  function openApp(appName: AppName) {
+    setOpenApps((current) =>
+      current.includes(appName) ? current : [...current, appName],
+    );
+  }
+
   const appNames: DesktopApp[] = [
     { appName: "Projects" },
     { appName: "Experience" },
@@ -20,14 +26,14 @@ export default function Home() {
   
 
   return(
-    <main>
+    <main className="desktop-shell">
       <div className="desktop">
         <ul className="desktop-icon-list">
           {appNames.map((icon) => (
             <DesktopIcon
               key={icon.appName}
               appName={icon.appName}
-              onOpen={() => setOpenApps((current) => current.includes(icon.appName) ? current : [...current, icon.appName])}
+              onOpen={() => openApp(icon.appName)}
             />
           ))}
         </ul>
@@ -42,7 +48,7 @@ export default function Home() {
         ))}
       
       </div>
-      <Footer />
+      <Footer onOpen={openApp} />
     </main>
   );
 }
