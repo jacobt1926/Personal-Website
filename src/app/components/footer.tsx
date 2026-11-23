@@ -6,9 +6,14 @@ export function Footer() {
         <footer className="footer">
             <ul className="taskbar">
                 {apps.map((app, index) => (
-                    <li key={index} className="taskbar-app-buttons"><button>{app}</button></li>
+                    <li key={index} className="taskbar-app-buttons">
+                        <button type="button">
+                            {app}
+                        </button>
+                    </li>
                 ))}
             </ul>
+            
         </footer>
     )
 }

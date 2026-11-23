@@ -2,21 +2,23 @@
 
 import Draggable from "react-draggable";
 import { useRef } from "react";
+import type { AppName } from "./appwindow";
 
-export type desktopIcon = {
-    appName: string;
+export type DesktopApp = {
+    appName: AppName;
 }
 
-const icons: desktopIcon[] = [{appName: 'Projects'}, {appName: 'Experience'}, {appName: 'About'}]
-
-
-export function DesktopIcon({appName}: { appName: string}) {
+export function DesktopIcon({appName, onOpen,}: {appName: string; onOpen: () => void;}) {
 
     const nodeRef = useRef<HTMLLIElement>(null);
 
     return(
         <Draggable nodeRef={nodeRef} bounds="parent">
-            <li ref={nodeRef} className="desktop-icons-individual">{appName}</li>
+            <li ref={nodeRef} className="desktop-icons-individual">
+                <button type="button" onDoubleClick={onOpen}>
+                    {appName}
+                </button>
+            </li>
         </Draggable>
     );
 }
