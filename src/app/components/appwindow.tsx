@@ -3,13 +3,14 @@
 
 import Draggable from "react-draggable";
 import { useRef } from "react";
-import { About, Projects, Experience } from "../functions/appwindowfunctions" 
+import { About, Projects, Experience, Contact} from "../functions/appwindowfunctions" 
 import { AppIcon } from "./appicon";
 
 const APPS = {
     About: About,
     Experience: Experience,
     Projects: Projects,
+    Contact: Contact,
 };
 
 export type AppName = keyof typeof APPS;

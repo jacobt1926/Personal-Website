@@ -21,6 +21,7 @@ export default function Home() {
     { appName: "Projects" },
     { appName: "Experience" },
     { appName: "About" },
+    { appName: "Contact"},
   ];
 
   

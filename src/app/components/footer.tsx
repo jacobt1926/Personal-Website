@@ -1,7 +1,7 @@
 import { TaskbarButton } from "./taskbarbutton";
 import type { AppName } from "./appwindow";
 
-const apps: AppName[] = ["Projects", "Experience", "About"];
+const apps: AppName[] = ["Projects", "Experience", "About", "Contact"];
 
 export function Footer({ onOpen }: { onOpen: (appName: AppName) => void }) {
     return (

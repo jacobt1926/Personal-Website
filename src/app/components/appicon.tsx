@@ -1,9 +1,12 @@
 import type { AppName } from "./appwindow";
+import Image from "next/image";
+import contactIcon from "../../images/contact.jpg";
 
 const ICON_COLORS: Record<AppName, string> = {
     Projects: "#3b82f6",
     Experience: "#8b5cf6",
     About: "#14b8a6",
+    Contact: "#1d6fe8",
 };
 
 export function AppIcon({
@@ -13,6 +16,19 @@ export function AppIcon({
     appName: AppName;
     size?: number;
 }) {
+    if (appName === "Contact") {
+        return (
+            <Image
+                className="app-icon contact-app-icon"
+                src={contactIcon}
+                width={size}
+                height={size}
+                alt=""
+                aria-hidden="true"
+            />
+        );
+    }
+
     return (
         <svg
             className="app-icon"
