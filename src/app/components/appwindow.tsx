@@ -3,7 +3,9 @@
 
 import Draggable from "react-draggable";
 import { useRef } from "react";
-import { About, Projects, Experience, Contact} from "../functions/appwindowfunctions" 
+import { Projects, Contact } from "../functions/appwindowfunctions";
+import { Experience } from "./experience";
+import { About } from "./about";
 import { AppIcon } from "./appicon";
 
 const APPS = {

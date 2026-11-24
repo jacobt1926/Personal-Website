@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-about-enter: about-enter 360ms ease-out both;
+  --animate-about-mark: about-mark 500ms 90ms ease-out both;
+
+  @keyframes about-enter {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes about-mark {
+    from { transform: scale(0.93); }
+    to { transform: scale(1); }
+  }
+}
+
 :root {
   --background: white;
   --foreground: white;
@@ -90,12 +105,6 @@ main.desktop-shell {
   flex: none;
   filter: drop-shadow(0 2px 4px rgb(0 0 0 / 22%));
 }
-
-.contact-app-icon {
-  border-radius: 27%;
-  object-fit: cover;
-}
-
 
 .app-window {
   position: absolute;
