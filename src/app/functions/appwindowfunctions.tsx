@@ -3,10 +3,15 @@ import emailIcon from "../../images/email icon.jpg";
 import githubIcon from "../../images/github icon.png";
 import instagramIcon from "../../images/instagram icon.jpg";
 import linkedinIcon from "../../images/linkedin icon.jpg";
+import Link from "next/link";
 
 export function Projects() {
     return(
-        <p>AI Murder bot</p>
+        <div>
+            <p>see my GitHub:</p>
+            <Link href={'https://github.com/jacobt1926'}>GitHub</Link>
+        </div>
+        
     )
 }
 
