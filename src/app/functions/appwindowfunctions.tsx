@@ -57,7 +57,7 @@ export function Contact() {
                     </p>
                     <h1 className="text-2xl font-semibold tracking-tight">Let&apos;s connect.</h1>
                     <p className="mt-2 max-w-xl text-sm leading-6 text-[#5b5b5b]">
-                        Have a project, opportunity, or just want to talk? Reach out through either of these channels.
+                        Feel free to reach out to me!
                     </p>
                 </header>
 
@@ -90,7 +90,7 @@ export function Contact() {
                     ))}
                 </div>
 
-                <p className="mt-6 text-xs text-[#777]">For the fastest reply, email is the best place to reach me.</p>
+                <p className="mt-6 text-xs text-[#777]">Email me or dm me on LinkedIn for the fastest reply.</p>
             </div>
         </div>
     );

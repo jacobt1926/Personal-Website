@@ -18,7 +18,7 @@ export default function SplashScreen({ onFinished }: { onFinished: () => void })
   return (
     <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
       <h1 className="animate-pulse text-4xl font-bold text-white">TholeOS</h1>
-      <p className="mt-2 text-gray-400">Loading...</p>
+      <p className="mt-2 text-gray-400">Booting up...</p>
     </div>
   );
 }
