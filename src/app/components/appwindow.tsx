@@ -28,7 +28,7 @@ export function AppWindow({appName, onClose}: {appName: AppName; onClose: () => 
                 <div className="window-titlebar">
                     <div className="window-title">
                         <AppIcon appName={appName} size={18} />
-                        <span>{appName}</span>
+                        <span>{appName === "Experience" ? "career.git — Commit History" : appName}</span>
                     </div>
                     <button
                         type="button"
